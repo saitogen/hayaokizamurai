@@ -7,7 +7,7 @@ const App = () => {
     <View style={styles.container}>
       <LoadingAnimation />
       {/* コメント！ */}
-      {/* テストします */}
+      {/* テストします　 */}
     </View>
   );
 };
