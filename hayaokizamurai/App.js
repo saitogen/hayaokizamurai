@@ -1,23 +1,30 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import LoadingAnimation from './LoadingAnimation';
+// In App.js in a new project
 
-const App = () => {
+import * as React from "react";
+import { StyleSheet } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import HomeScreen from "./page/home";
+import SecondScreen from "./page/second";
+
+function App() {
+  const Stack = createNativeStackNavigator();
+
+  const screenOptions = {
+    headerStyle: {
+      backgroundColor: "#D0F6FE",
+    },
+    headerTitle: "",
+  };
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-      {/* テストです！ */}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Second" component={SecondScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
+}
 
 export default App;
