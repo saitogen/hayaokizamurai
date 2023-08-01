@@ -48,9 +48,9 @@ const SamuraiScreen = ({ navigation }) => {
       <View style={styles.side}>
         <Text style={styles.title}>過去3日の履歴</Text>
         <View style={styles.texts}>
-          <Text style={styles.textItem}>2023/06/04</Text>
-          <Text style={styles.textItem}>2023/06/02</Text>
-          <Text style={styles.textItem}>2023/06/01</Text>
+          <Text style={styles.textItem}>{}</Text>
+          <Text style={styles.textItem}>{}</Text>
+          <Text style={styles.textItem}>{}</Text>
         </View>
       </View>
       <ImageBackground

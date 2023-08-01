@@ -9,6 +9,9 @@ import AddScreen from "./page/add";
 import RankScreen from "./page/rank";
 import * as SplashScreen from 'expo-splash-screen';
 import 'react-native-gesture-handler';
+import Shake from "./page/Shake";
+import { RecoilRoot } from 'recoil';
+import Result from "./page/Result";
 
 
 
@@ -25,15 +28,23 @@ function App() {
   };
 
   return (
+    <RecoilRoot>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home" screenOptions={screenOptions}>
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Samurai" component={SamuraiScreen} />
         <Stack.Screen name="Add" component={AddScreen} />
         <Stack.Screen name="Rank" component={RankScreen} />
+        <Stack.Screen name="Shake" component={Shake} 
+        // options={{headerShown: false,}}
+        />
+        <Stack.Screen name="Result" component={Result} 
+          // options={{headerShown: false,}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
-    // <Test/>
+    {/* // <Test/> */}
+    </RecoilRoot>
   );
 }
 

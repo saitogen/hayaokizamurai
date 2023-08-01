@@ -10,6 +10,8 @@ const AddScreen = ({ navigation }) => {
   const [timeData,setTimeData]=useState([]);
   const handleTimeButtonPress = () => {
     setTimeContents(true);
+
+  
   };
   const handleTimeChange = (newTimes) => {
     setTimeData(newTimes); // 新しい時間データをセット
@@ -139,8 +141,8 @@ const styles = StyleSheet.create({
     width:250,
     height:250,
     position:"absolute",
-    top:200,
-    left:70,
+    top:220,
+    left:80,
     resizeMode: "contain",
 
   }
