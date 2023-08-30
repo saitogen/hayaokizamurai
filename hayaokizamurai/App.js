@@ -14,7 +14,6 @@ import { RecoilRoot } from 'recoil';
 import Result from "./page/Result";
 
 
-
 function App() {
   const Stack = createNativeStackNavigator();
 
@@ -27,6 +26,8 @@ function App() {
     },
   };
 
+
+
   return (
     <RecoilRoot>
     <NavigationContainer>
@@ -36,10 +37,10 @@ function App() {
         <Stack.Screen name="Add" component={AddScreen} />
         <Stack.Screen name="Rank" component={RankScreen} />
         <Stack.Screen name="Shake" component={Shake} 
-        // options={{headerShown: false,}}
+        options={{headerShown: false,}}
         />
         <Stack.Screen name="Result" component={Result} 
-          // options={{headerShown: false,}}
+          options={{headerShown: false,}}
         />
       </Stack.Navigator>
     </NavigationContainer>

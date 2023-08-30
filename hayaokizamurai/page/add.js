@@ -25,14 +25,7 @@ const AddScreen = ({ navigation }) => {
         style={styles.ceiling}
       >
         <View style={styles.header}>
-          {/* <View style={styles.rectangle}>
-            <Text style={styles.headerText}>時間設定</Text>
-          </View> */}
         </View>
-        {/* <TouchableOpacity onPress={handleTimeButtonPress}>
-          <Text style={styles.conText}>起きる時間を決めろ！！</Text>
-        </TouchableOpacity> */}
-        {/* {timeContents &&(  */}
         <View style={styles.timeDesign}>
         <Time
           btnData={timeContents}
@@ -40,13 +33,6 @@ const AddScreen = ({ navigation }) => {
           timeData={timeData} // 時間データを渡す
           onTimeChange={handleTimeChange} // コールバック関数を渡す
         />
-        <Time
-            btnData={timeContents}
-            setBtnData={setTimeContents}
-            timeData={timeData}
-            onTimeChange={handleTimeChange}
-        />
-
         </View>
         <Image
               style={styles.samurai}
